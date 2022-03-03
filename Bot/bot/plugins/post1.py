@@ -9,7 +9,7 @@ async def post(bot, message):
     sex = message.text.split(" ", maxsplit=1)[1]
     cmd = message.text.split(" ", maxsplit=1)[1]
     text= (
-        "<b>🌀Hot Video XXX Video New Collection 🤤 🔥💧💦</b>\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n📥𝗪𝗮𝘁𝗰𝗵 𝗢𝗻𝗹𝗶𝗻𝗲👀 and 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱\n\n👉<b>{}</b>\n👉<b>{}</b>▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n<a href="https://play.google.com/store/apps/details?id=com.rs.playerjet">✴️Install PlayerJet & Watch Unlimited Time💥</a>\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n".format(
+        "<b>🌀Hot Video XXX Video New Collection 🤤 🔥💧💦</b>\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n📥𝗪𝗮𝘁𝗰𝗵 𝗢𝗻𝗹𝗶𝗻𝗲👀 and 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱\n\n👉<b>{}</b>\n👉<b>{}</b>\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n".format(
             cmd,sex
         )
     )
