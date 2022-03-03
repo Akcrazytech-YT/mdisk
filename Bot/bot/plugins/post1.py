@@ -11,8 +11,8 @@ fuck = ["https://telegra.ph/file/944caf39b3988593b815f.jpg", "https://telegra.ph
 @Bot.on_message()
 async def post(bot, message):
     status_message = await message.reply_text("Making Post ...")
-    hi = message.text.split(" ", maxsplit=1)[1]
-    cmd = message.text.split(" ", maxsplit=1)[1]
+    hi = message.text.split("", maxsplit=0)[0]
+    cmd = message.text.split("", maxsplit=0)[0]
     text= (
         "**🌀Hot Video XXX Video New Collection 🤤 🔥💧💦**\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n**📥𝗪𝗮𝘁𝗰𝗵 𝗢𝗻𝗹𝗶𝗻𝗲👀/ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱**\n\n👉{}\n👉{}\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n[✴️Install PlayerJet & Watch Unlimited Time💥](https://play.google.com/store/apps/details?id=com.rs.playerjet)\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬".format(
         cmd,hi
