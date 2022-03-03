@@ -9,7 +9,7 @@ async def post(bot, message):
     hi = message.text.split(" ", maxsplit=1)[1]
     cmd = message.text.split(" ", maxsplit=1)[1]
     text= (
-        "__Below Is Your Download Link__\n\n Link 🔗: {}\nLink: {}\n\n[Made By](https://pyrogram.org/)".format(
+        "**🌀Hot Video XXX Video New Collection 🤤 🔥💧💦**\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n**📥𝗪𝗮𝘁𝗰𝗵 𝗢𝗻𝗹𝗶𝗻𝗲👀/ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱**\n\n👉{}\n👉{}\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n[✴️Install PlayerJet & Watch Unlimited Time💥](https://play.google.com/store/apps/details?id=com.rs.playerjet)\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬".format(
         cmd,hi
         )
     )
