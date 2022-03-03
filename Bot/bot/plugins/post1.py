@@ -4,7 +4,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from Bot.bot import Bot
 from Bot.vars import Var
 
-@StreamBot.on_message(filters.command(["start", "help"]))
+@Bot.on_message(filters.command(["start", "help"]))
 async def start(_, m: Message):
     await m.reply(
         f'**🔅Send Me Streaam Link Which You Want In Format.**'
