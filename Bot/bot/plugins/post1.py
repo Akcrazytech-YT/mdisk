@@ -1,7 +1,13 @@
+import random
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from Bot.bot import Bot
 from Bot.vars import Var
+
+A = ["https://telegra.ph/file/944caf39b3988593b815f.jpg", "https://telegra.ph/file/c5aca1bc2f76c9cfd389a.jpg"]
+h = random.choice(A)
+
+
 
 @Bot.on_message(filters.command(["post"]))
 async def post(bot, message):
@@ -15,7 +21,7 @@ async def post(bot, message):
     )
     
     await message.reply_photo(
-    photo="https://telegra.ph/file/173093c36a565a8890e0a.jpg",
+    photo=h,
     caption=text, 
     parse_mode="Markdown"
     )
