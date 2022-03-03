@@ -4,7 +4,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from Bot.bot import Bot
 from Bot.vars import Var
 
-A = ["https://telegra.ph/file/944caf39b3988593b815f.jpg", "https://telegra.ph/file/c5aca1bc2f76c9cfd389a.jpg"]
+A = ["https://telegra.ph/file/944caf39b3988593b815f.jpg", "https://telegra.ph/file/c5aca1bc2f76c9cfd389a.jpg","https://telegra.ph/file/ceafda01bfce443939c51.jpg","https://telegra.ph/file/173093c36a565a8890e0a.jpg","https://telegra.ph/file/22ec5ab752cc953ef7acb.jpg","https://telegra.ph/file/85446d617badc3ab0dc1c.jpg","https://telegra.ph/file/32e3e6f58286fe699d37b.jpg"]
 h = random.choice(A)
 
 
@@ -21,7 +21,7 @@ async def post(bot, message):
     )
     
     await message.reply_photo(
-    photo="{h}",
+    photo=h,
     caption=text, 
     parse_mode="Markdown"
     )
