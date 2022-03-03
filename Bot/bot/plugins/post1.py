@@ -9,7 +9,7 @@ async def post(bot, message):
     hi = message.text.split(" ", maxsplit=1)[1]
     cmd = message.text.split(" ", maxsplit=1)[1]
     text= (
-        "**Below Is Your Download Link\n\n Link 🔗: {}\nLink: {} ".format(
+        "__Below Is Your Download Link__\n\n Link 🔗: {}\nLink: {}\n\n[Made By](https://pyrogram.org/)".format(
         cmd,hi
         )
     )
@@ -17,5 +17,6 @@ async def post(bot, message):
     await message.reply_photo(
     photo="https://telegra.ph/file/173093c36a565a8890e0a.jpg",
     caption=text
+    parse_mode="Markdown"
     )
     await status_message.delete()
