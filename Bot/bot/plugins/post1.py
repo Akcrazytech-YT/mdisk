@@ -21,7 +21,7 @@ async def post(bot, message):
     )
     
     await message.reply_photo(
-    photo=h,
+    photo="{h}",
     caption=text, 
     parse_mode="Markdown"
     )
