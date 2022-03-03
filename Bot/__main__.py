@@ -9,7 +9,7 @@ from pyrogram import idle
 from .bot import Bot
 from .vars import Var
 
-ppath = "bot/plugins/*.py"
+ppath = "Bot/bot/plugins/*.py"
 files = glob.glob(ppath)
 
 loop = asyncio.get_event_loop()
