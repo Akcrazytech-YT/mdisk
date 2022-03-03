@@ -8,7 +8,7 @@ fuck = ["https://telegra.ph/file/944caf39b3988593b815f.jpg", "https://telegra.ph
 
 
 
-@Bot.on_message(filters.command(["post"]))
+@Bot.on_message()
 async def post(bot, message):
     status_message = await message.reply_text("Making Post ...")
     hi = message.text.split(" ", maxsplit=1)[1]
