@@ -11,7 +11,7 @@ async def start(_, m: Message):
     )
 
 
-fuck = ["https://telegra.ph/file/944caf39b3988593b815f.jpg", "https://telegra.ph/file/c5aca1bc2f76c9cfd389a.jpg","https://telegra.ph/file/ceafda01bfce443939c51.jpg","https://telegra.ph/file/173093c36a565a8890e0a.jpg","https://telegra.ph/file/22ec5ab752cc953ef7acb.jpg","https://telegra.ph/file/85446d617badc3ab0dc1c.jpg","https://telegra.ph/file/32e3e6f58286fe699d37b.jpg"]
+fuck = ["https://telegra.ph/file/f4ddb9e5f38c89254df59.jpg","https://telegra.ph/file/f4ddb9e5f38c89254df59.jpg"]
 
 
 
