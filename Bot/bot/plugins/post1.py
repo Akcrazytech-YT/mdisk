@@ -21,7 +21,7 @@ async def post(bot, message):
     hi = message.text
     cmd = message.text
     text= (
-        "**🌀Hot Video XXX Video New Collection 🤤 🔥💧💦**\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n**📥𝗪𝗮𝘁𝗰𝗵 𝗢𝗻𝗹𝗶𝗻𝗲👀/ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱**\n\n👉{}\n👉{}\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n[✴️Install PlayerJet & Watch Unlimited Time💥](https://play.google.com/store/apps/details?id=com.rs.playerjet)\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬".format(
+        "**Today  D€$! Premium video🥰🥰**\n\n**😍 WATCH ONLINE OR DOWNLOAD 📱**\n**(Just Install #PLAYERJET App from playstore)**\n**(💥 Fastest Speed No Buffering)**\n━━━━━━━━━━━━━━━━━\n**✅Download/Online Watch 720p👇**\n━━━━━━━━━━━━━━━━━\n👉{}\n👉{}\n━━━━━━━━━━━━━━━━━\n**Stay In Channel For More Videos 🔥**".format(
         cmd,hi
         )
     )
