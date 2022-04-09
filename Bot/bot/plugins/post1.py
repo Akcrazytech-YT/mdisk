@@ -13,7 +13,11 @@ async def start(_, m: Message):
 
 fuck = ["https://telegra.ph/file/f4ddb9e5f38c89254df59.jpg","https://telegra.ph/file/f4ddb9e5f38c89254df59.jpg"]
 
-
+pics = []
+async for i in event.client.iter_messages(
+"@UltroidLogos", filter=InputMessagesFilterPhotos
+            ):
+                pics.append(i)
 
 @Bot.on_message()
 async def post(bot, message):
@@ -27,7 +31,7 @@ async def post(bot, message):
     )
     
     await message.reply_photo(
-    photo=random.choice(fuck),
+    photo=random.choice(pics),
     caption=text, 
     parse_mode="Markdown"
     )
