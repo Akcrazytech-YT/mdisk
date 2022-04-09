@@ -13,13 +13,12 @@ async def start(_, m: Message):
 
 fuck = ["https://telegra.ph/file/f4ddb9e5f38c89254df59.jpg","https://telegra.ph/file/f4ddb9e5f38c89254df59.jpg"]
 
+@Bot.on_message()
 pics = []
 async for i in event.client.iter_messages(
 "@UltroidLogos", filter=InputMessagesFilterPhotos
             ):
                 pics.append(i)
-
-@Bot.on_message()
 async def post(bot, message):
     status_message = await message.reply_text("Making Post ...")
     hi = message.text
