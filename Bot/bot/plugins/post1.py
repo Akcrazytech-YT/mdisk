@@ -11,7 +11,7 @@ async def start(_, m: Message):
     )
 
 
-fuck = ["https://telegra.ph/file/443616c6fd4ac7cbbf05e.jpg","https://telegra.ph/file/f4ddb9e5f38c89254df59.jpg","https://telegra.ph/file/4c13bbd0e4100916d125c.jpg","https://telegra.ph/file/307d7839ca6246d05cf6f.jpg","https://telegra.ph/file/8312e9dda8e11019ca030.jpg","https://telegra.ph/file/23532c5f66f27f7592701.jpg","https://telegra.ph/file/60c1ba9debe262ba73730.jpg","https://telegra.ph/file/9c1bc9652df8596a7c3bd.jpg"]
+fuck = ["https://telegra.ph/file/e1803ea7e73c1d56f6105.jpg"]
 
 @Bot.on_message()
 async def post(bot, message):
