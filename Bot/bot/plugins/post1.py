@@ -9,11 +9,11 @@ from PIL import Image
 from database.database import *
 from database.db import *
 
-thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(Bot.from_user.id) + ".jpg"
 if not os.path.exists(thumb_image_path):
-            mes = await thumb(update.from_user.id)
+            mes = await thumb(Bot.from_user.id)
             if mes != None:
-                        m = await bot.get_messages(update.chat.id, mes.msg_id)
+                        m = await bot.get_messages(Bot.chat.id, mes.msg_id)
                         await m.download(file_name=thumb_image_path)
                         thumb_image_path = thumb_image_path
 
@@ -26,18 +26,24 @@ async def start(_, m: Message):
 
 @Bot.on_message()
 async def post(bot, message):
-    status_message = await message.reply_text("Making Post ...")
-    hi = message.text
-    cmd = message.text
-    text= (
-        "**Today  D€$! Premium video🥰🥰**\n\n**😍 WATCH ONLINE OR DOWNLOAD 📱**\n**(Just Install #PLAYERJET App from playstore)**\n**(💥 Fastest Speed No Buffering)**\n━━━━━━━━━━━━━━━━━\n**✅Download/Online Watch 720p👇**\n━━━━━━━━━━━━━━━━━\n👉{}\n👉{}\n━━━━━━━━━━━━━━━━━\n**Stay In Channel For More Videos 🔥**".format(
-        cmd,hi
-        )
-    )
-    
-    await message.reply_photo(
-    photo=thumb_image_path,
-    caption=text, 
-    parse_mode="Markdown"
-    )
-    await status_message.delete()
+            thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(message.from_user.id) + ".jpg"
+if not os.path.exists(thumb_image_path):
+            mes = await thumb(message.from_user.id)
+            if mes != None:
+                        m = await bot.get_messages(message.chat.id, mes.msg_id)
+                        await m.download(file_name=thumb_image_path)
+                        thumb_image_path = thumb_image_path
+                        status_message = await message.reply_text("Making Post ...")
+                        hi = message.text
+                        cmd = message.text
+                        text= (
+                                    "**Today  D€$! Premium video🥰🥰**\n\n**😍 WATCH ONLINE OR DOWNLOAD 📱**\n**(Just Install #PLAYERJET App from playstore)**\n**(💥 Fastest Speed No Buffering)**\n━━━━━━━━━━━━━━━━━\n**✅Download/Online Watch 720p👇**\n━━━━━━━━━━━━━━━━━\n👉{}\n👉{}\n━━━━━━━━━━━━━━━━━\n**Stay In Channel For More Videos 🔥**".format(
+                                                cmd,hi
+                                    )
+                        )
+                        await message.reply_photo(
+                                    photo=thumb_image_path,
+                                    caption=text,
+                                    parse_mode="Markdown"
+                        )
+                        await status_message.delete()
