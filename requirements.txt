@@ -3,3 +3,11 @@ pyrogram
 python-dotenv
 tgcrypto
 requests
+beautifulsoup4
+hachoir
+numpy
+Pillow
+ffmpeg-python
+ffmpeg
+sqlalchemy==1.3.23
+psycopg2-binary
