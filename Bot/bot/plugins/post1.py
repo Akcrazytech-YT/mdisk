@@ -1,8 +1,23 @@
+import os
+import time
 import random
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from Bot.bot import Bot
 from Bot.vars import Var
+from PIL import Image
+from database.database import *
+from database.db import *
+
+thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+            if not os.path.exists(thumb_image_path):
+                mes = await thumb(update.from_user.id)
+                if mes != None:
+                    m = await bot.get_messages(update.chat.id, mes.msg_id)
+                    await m.download(file_name=thumb_image_path)
+                    thumb_image_path = thumb_image_path
+                else:
+                    thumb_image_path = None
 
 @Bot.on_message(filters.command(["start", "help"]))
 async def start(_, m: Message):
@@ -10,8 +25,6 @@ async def start(_, m: Message):
         f'**🔅Send Me Streaam Link Which You Want In Format.**'
     )
 
-
-fuck = ["https://telegra.ph/file/e1803ea7e73c1d56f6105.jpg"]
 
 @Bot.on_message()
 async def post(bot, message):
@@ -25,8 +38,12 @@ async def post(bot, message):
     )
     
     await message.reply_photo(
-    photo=random.choice(fuck),
+    photo=thumb_image_path,
     caption=text, 
     parse_mode="Markdown"
     )
     await status_message.delete()
+    try:
+                os.remove(new_file_name)
+                os.remove(thumb_image_path)
+
