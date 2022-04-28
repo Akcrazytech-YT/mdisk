@@ -27,17 +27,17 @@ async def start(_, m: Message):
 @Bot.on_message()
 async def post(bot, message):
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(message.from_user.id) + ".jpg"
-                        status_message = await message.reply_text("Making Post ...")
-                        hi = message.text
-                        cmd = message.text
-                        text= (
-                                    "**Today  D€$! Premium video🥰🥰**\n\n**😍 WATCH ONLINE OR DOWNLOAD 📱**\n**(Just Install #PLAYERJET App from playstore)**\n**(💥 Fastest Speed No Buffering)**\n━━━━━━━━━━━━━━━━━\n**✅Download/Online Watch 720p👇**\n━━━━━━━━━━━━━━━━━\n👉{}\n👉{}\n━━━━━━━━━━━━━━━━━\n**Stay In Channel For More Videos 🔥**".format(
-                                                cmd,hi
-                                    )
+            status_message = await message.reply_text("Making Post ...")
+            hi = message.text
+            cmd = message.text
+            text= (
+                        "**Today  D€$! Premium video🥰🥰**\n\n**😍 WATCH ONLINE OR DOWNLOAD 📱**\n**(Just Install #PLAYERJET App from playstore)**\n**(💥 Fastest Speed No Buffering)**\n━━━━━━━━━━━━━━━━━\n**✅Download/Online Watch 720p👇**\n━━━━━━━━━━━━━━━━━\n👉{}\n👉{}\n━━━━━━━━━━━━━━━━━\n**Stay In Channel For More Videos 🔥**".format(
+                                    cmd,hi
                         )
-                        await message.reply_photo(
-                                    photo=thumb_image_path,
-                                    caption=text,
-                                    parse_mode="Markdown"
-                        )
-                        await status_message.delete()
+            )
+            await message.reply_photo(
+                        photo=thumb_image_path,
+                        caption=text,
+                        parse_mode="Markdown"
+            )
+            await status_message.delete()
