@@ -43,4 +43,3 @@ async def post(bot, message):
     await status_message.delete()
 try:
                         os.remove(thumb_image_path)
-
