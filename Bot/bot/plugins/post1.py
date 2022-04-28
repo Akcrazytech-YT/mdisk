@@ -43,7 +43,6 @@ async def post(bot, message):
     parse_mode="Markdown"
     )
     await status_message.delete()
-    try:
-                os.remove(new_file_name)
-                os.remove(thumb_image_path)
+try:
+                        os.remove(thumb_image_path)
 
