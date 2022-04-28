@@ -27,12 +27,6 @@ async def start(_, m: Message):
 @Bot.on_message()
 async def post(bot, message):
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(message.from_user.id) + ".jpg"
-if not os.path.exists(thumb_image_path):
-            mes = await thumb(message.from_user.id)
-            if mes != None:
-                        m = await bot.get_messages(message.chat.id, mes.msg_id)
-                        await m.download(file_name=thumb_image_path)
-                        thumb_image_path = thumb_image_path
                         status_message = await message.reply_text("Making Post ...")
                         hi = message.text
                         cmd = message.text
