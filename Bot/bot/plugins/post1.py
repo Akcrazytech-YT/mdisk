@@ -5,9 +5,8 @@ from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from Bot.bot import Bot
 from Bot.vars import Var
-from PIL import Image
-from database.database import *
-from database.db import *
+
+fuk="https://te.legra.ph/file/721510ad14d25ac18004d.jpg"
 
 @Bot.on_message(filters.command(["start", "help"]))
 async def start(_, m: Message):
@@ -18,17 +17,16 @@ async def start(_, m: Message):
 
 @Bot.on_message()
 async def post(bot, message):
-            thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(message.from_user.id) + ".jpg"
             status_message = await message.reply_text("Making Post ...")
             hi = message.text
             cmd = message.text
             text= (
-                        "**Today  D€$! Premium video🥰🥰**\n\n**😍 WATCH ONLINE OR DOWNLOAD 📱**\n**(Just Install #PLAYERJET App from playstore)**\n**(💥 Fastest Speed No Buffering)**\n━━━━━━━━━━━━━━━━━\n**✅Download/Online Watch 720p👇**\n━━━━━━━━━━━━━━━━━\n👉{}\n👉{}\n━━━━━━━━━━━━━━━━━\n**Stay In Channel For More Videos 🔥**".format(
+                        "**📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐋𝐢𝐧𝐤𝐬/👀𝐖𝐚𝐭𝐜𝐡 𝐎𝐧𝐥𝐢𝐧𝐞👇**\n\n**(Just Install #PLAYERJET App from playstore)**\n**(💥 Fastest Speed No Buffering)**\n━━━━━━━━━━━━━━━━━\n**Video 1.👉 {}**\n**Video 1.👉 {}**\n━━━━━━━━━━━━━━━━━\n**How To Watch Tutorial 👇**\n**https://t.me/open_streaam/14**".format(
                                     cmd,hi
                         )
             )
             await message.reply_photo(
-                        photo=thumb_image_path,
+                        photo=fuk,
                         caption=text,
                         parse_mode="Markdown"
             )
