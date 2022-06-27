@@ -5,7 +5,6 @@ from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from Bot.bot import Bot
 from Bot.vars import Var
-from pyrogram.enums.parse_mode import ParseMode
 
 @Bot.on_message(filters.private & filters.text)
 async def download_handler(client: Client, message: Message):
@@ -16,9 +15,9 @@ async def download_handler(client: Client, message: Message):
         if url_validator(url):
             valid_url.append(url)
     for x in range(len(valid_url)):
-        reply_text=reply_text + f"**VIDEO {str(x+1)})**\n{valid_url[x]}\n\n"
+        reply_text=reply_text + f"VIDEO {str(x+1)})\n{valid_url[x]}\n\n"
     reply_text=reply_text+"━━━━━━━━━━━━━━━\n\nHow To Watch Tutorial 👇\n\nhttps://t.me/open_streaam/14"
-    await message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)        
+    await message.reply_text(reply_text, parse_mode="markdown", disable_web_page_preview=True)        
 
 # https://github.com/django/django/blob/stable/1.3.x/django/core/validators.py#L45
 
