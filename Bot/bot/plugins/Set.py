@@ -7,7 +7,7 @@ from Bot.bot import Bot
 from Bot.vars import Var
 
 @Bot.on_message(filters.private & filters.text)
-async def download_handler(client: Client, message: Message):
+async def download_handler(client, message):
     valid_url=[]
     text=message.text.split()
     reply_text="💥TODAY BEST NEW VIDEOS 👇\n\n"
