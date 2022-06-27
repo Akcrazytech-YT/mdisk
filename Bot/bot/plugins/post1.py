@@ -17,17 +17,24 @@ async def start(_, m: Message):
 
 @Bot.on_message()
 async def post(bot, message):
-            status_message = await message.reply_text("Making Post ...")
-            hi = message.text
-            cmd = message.text
-            text= (
-                        "**📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐋𝐢𝐧𝐤𝐬/👀𝐖𝐚𝐭𝐜𝐡 𝐎𝐧𝐥𝐢𝐧𝐞👇**\n\n**(Just Install #PLAYERJET App from playstore)**\n**(💥 Fastest Speed No Buffering)**\n━━━━━━━━━━━━━━━━━\n**Video 1.👉 {}**\n**Video 1.👉 {}**\n━━━━━━━━━━━━━━━━━\n**How To Watch Tutorial 👇**\n**https://t.me/open_streaam/14**".format(
-                                    cmd,hi
-                        )
-            )
-            await message.reply_photo(
-                        photo=fuk,
-                        caption=text,
-                        parse_mode="Markdown"
-            )
-            await status_message.delete()
+    valid_url=[]
+    text=message.text.split()
+    reply_text="💥TODAY BEST NEW VIDEOS 👇\n\n"
+    for url in text:
+        if url_validator(url):
+            valid_url.append(url)
+    for x in range(len(valid_url)):
+        reply_text=reply_text + f"VIDEO {str(x+1)})\n{valid_url[x]}\n\n"
+    reply_text=reply_text+"━━━━━━━━━━━━━━━\n\nHow To Watch Tutorial 👇\n\nhttps://t.me/open_streaam/14"
+    await message.reply_text(reply_text, parse_mode="markdown", disable_web_page_preview=True)        
+
+# https://github.com/django/django/blob/stable/1.3.x/django/core/validators.py#L45
+
+def url_validator(url):
+    URLRegex = re.compile(
+        r'^(?:http|ftp)s?://' # http:// or https://
+        r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|' #domain...
+        r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' # ...or ip
+        r'(?::\d+)?' # optional port
+        r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+    return bool(re.match(URLRegex, url))
