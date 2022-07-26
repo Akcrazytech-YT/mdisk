@@ -29,8 +29,6 @@ async def mdisk_convertor(client, message):
   for url in text:
     if url_validator(url):
       await message.reply_text(msg, parse_mode="markdown", disable_web_page_preview=True)
-      else:
-        await message.reply_text("Send Valid Url")
         
         
 def url_validator(url):
