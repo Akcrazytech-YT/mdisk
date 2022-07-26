@@ -19,16 +19,14 @@ import sys
 
 @Bot.on_message(filters.private & filters.text)
 async def mdisk_convertor(client, message):
-  url=[]
-  id=message.text.split('/')[5]
-  resp=requests.get(f'https://diskuploader.entertainvideo.com/v1/file/cdnurl?param={id}')
-  response=resp.json
-  source=response ['source']
-  name=response ['filename']
-  msg=f"Mdisk Link Converted\nFile Name : {name}\n\n mpd : {source}"
-  for url in text:
-    if url_validator(url):
-      await message.reply_text(msg, parse_mode="markdown", disable_web_page_preview=True)
+  if url_validator(message.text):
+    id=message.text.split('/')[5]
+    resp=requests.get(f'https://diskuploader.entertainvideo.com/v1/file/cdnurl?param={id}')
+    response=resp.json()
+    source=response ['source']
+    name=response ['filename']
+    msg=f"Mdisk Link Converted\nFile Name : {name}\n\n mpd : {source}"
+    await message.reply_text(msg, parse_mode="markdown", disable_web_page_preview=True)
         
         
 def url_validator(url):
