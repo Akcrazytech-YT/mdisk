@@ -3,6 +3,7 @@ import requests
 from random import random
 import secrets
 import time
+from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from Bot.bot import Bot
 from Bot.vars import Var
