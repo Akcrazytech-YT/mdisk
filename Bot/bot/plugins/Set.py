@@ -14,13 +14,14 @@ import aiohttp
 import string
 import io
 import os
+import re
 import shutil
 import sys
 
 @Bot.on_message(filters.private & ~filters.user(Var.ADMIN))
 async def unauth(_, m: Message):
         await m.reply_text(
-        text='**You are not Authorised Users**'
+        text='**You are not Authorised User**'
     )
 
 @Bot.on_message(filters.private & filters.text)
