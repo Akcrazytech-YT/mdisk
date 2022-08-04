@@ -17,6 +17,12 @@ import os
 import shutil
 import sys
 
+@Bot.on_message(filters.private & ~filters.user(Var.ADMIN))
+async def unauth(_, m: Message):
+        await m.reply_text(
+        text='**You are not Authorised Users**'
+    )
+
 @Bot.on_message(filters.private & filters.text)
 async def mdisk_convertor(client, message):
   if url_validator(message.text):
