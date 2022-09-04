@@ -32,7 +32,7 @@ async def mdisk_convertor(client, message):
     response=resp.json()
     source=response ['source']
     name=response ['filename']
-    msg=f"Mdisk Link Converted\nFile Name : {name}\n\n mpd : {source}"
+    msg=f"**Mdisk Link Converted**\nFile Name : {name}\n\nPlayer: `https://playerjet.com/thirdparty/chotatv?id={id}`"
     await message.reply_text(msg, parse_mode="markdown", disable_web_page_preview=True)
         
         
