@@ -3,5 +3,3 @@ pyrogram<=1.4.16
 python-dotenv<=0.20.0
 tgcrypto<=1.2.3
 requests
-ffmpeg-python
-ffmpeg
