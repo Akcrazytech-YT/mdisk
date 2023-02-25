@@ -34,7 +34,7 @@ async def start_services():
             sys.modules["Bot.bot.plugins." + plugin_name] = load
             print("Imported => " + plugin_name)
     print('\n')
-    print('----------------------- Started Bot -----------------------')
+    print('----------------------- Started Mdisk Link Bot -----------------------')
     print('                        bot =>> {}'.format((await Bot.get_me()).first_name))
     await idle()
 
