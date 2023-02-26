@@ -33,6 +33,8 @@ Before running the bot, you will need to set up the following mandatory variable
 
 - `BOT_TOKEN` : This is the bot token for the Telegram Media Streamer Bot, which can be obtained from [@BotFather](https://telegram.dog/BotFather).
 
+- `Admin` : Edit Admin Telegram User ID in vars.py.
+
 ## Copyright
 
 Copyright (C) 2022 [Akcrazytech-YT](https://github.com/Akcrazytech-YT) under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html).
