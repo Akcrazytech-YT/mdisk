@@ -21,7 +21,7 @@ import sys
 @Bot.on_message(filters.private & ~filters.user(Var.ADMIN))
 async def unauth(_, m: Message):
         await m.reply_text(
-        text='**You are not Authorised User**'
+        text='**You are not Authorised User**\n\n**Bot By @Akcrazytech**'
     )
 
 @Bot.on_message(filters.private & filters.text)
@@ -30,9 +30,10 @@ async def mdisk_convertor(client, message):
     id=message.text.split('/')[5]
     resp=requests.get(f'https://diskuploader.entertainvideo.com/v1/file/cdnurl?param={id}')
     response=resp.json()
+    download=response ['download']
     source=response ['source']
     name=response ['filename']
-    msg=f"**Mdisk Link Converted**\nFile Name : {name}\n\nPlayer: `https://playerjet.com/thirdparty/chotatv?id={id}`\n\nMpd : `{source}`"
+    msg=f"**Mdisk Link Converted**\nFile Name : {name}\n\nMp4: `{download}`\n\nMpd : `{source}`"
     await message.reply_text(msg, parse_mode="markdown", disable_web_page_preview=True)
         
         
