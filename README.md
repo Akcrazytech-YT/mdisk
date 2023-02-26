@@ -37,7 +37,7 @@ Before running the bot, you will need to set up the following mandatory variable
 
 ## Copyright
 
-Copyright (C) 2022 [Akcrazytech-YT](https://github.com/Akcrazytech-YT) under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html).
+Copyright (C) 2023 [Akcrazytech-YT](https://github.com/Akcrazytech-YT) under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html).
 
 Mdisk Direct link Bot is Free Software: You can use, study share and improve it at your
 will. Specifically you can redistribute and/or modify it under the terms of the
